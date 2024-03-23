@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "5edfac42-bbf8-400e-87eb-2cd433eb2222",
+		"name": "Clientes BISA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/persona",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Carmen\",\r\n    \"apellidoPaterno\": \"Laura\",\r\n    \"apellidoMaterno\": \"Mamani\",\r\n    \"fechaNacimiento\": \"1991-04-18\",\r\n    \"direccion\": \"El alto villa mercedes\",\r\n    \"carnetIdentidad\": \"7035690LP\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/persona",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"persona"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/personas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/personas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"personas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"personaId\": \"4231d8b5-4681-4f39-96b8-98fda7fb005b\",\r\n    \"email\": \"carmen@gmail.com\",\r\n    \"telefono\": \"225588\",\r\n    \"ocupacion\": \"Desarrolladora\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/cliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cliente"
+					]
+				},
+				"description": "Crear cliente, previamente la persona ya debe estar registrada"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/ec5b8750-f788-4659-be4e-0e960a4a4571/referencias",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clienteId\": \"ec5b8750-f788-4659-be4e-0e960a4a4571\",\r\n    \"personaId\": \"1889ecdc-cfc7-4cc6-883e-da79600c8bbb\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/ec5b8750-f788-4659-be4e-0e960a4a4571/referencias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"ec5b8750-f788-4659-be4e-0e960a4a4571",
+						"referencias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/ec5b8750-f788-4659-be4e-0e960a4a4571/referencias",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clienteId\": \"ec5b8750-f788-4659-be4e-0e960a4a4571\",\r\n    \"personaId\": \"1889ecdc-cfc7-4cc6-883e-da79600c8bbb\",\r\n    \"motivo\": \"eliminado por error\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/ec5b8750-f788-4659-be4e-0e960a4a4571/referencias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"ec5b8750-f788-4659-be4e-0e960a4a4571",
+						"referencias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/clientes/NULA",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/clientes/BUENA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"BUENA"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
